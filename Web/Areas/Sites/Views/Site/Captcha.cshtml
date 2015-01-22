@@ -1,0 +1,144 @@
+﻿@model Dictionary<string, string>
+@{
+    Model["UserName"] = "Tsingbo";
+    Model["Password"] = "Tsingbo";
+}
+
+<table>
+    <tbody>
+        <tr>
+            <th>
+                <label for="Smtp_Port">
+                    Length
+                </label>
+            </th>
+            <td>
+                <input class="mini" data-val="true" data-val-number="The field Length must be a number." data-val-required="Required" id="Smtp_Port" name="Smtp.Port" type="text" value="5">
+                <span class="field-validation-valid" data-valmsg-for="Smtp.Port" data-valmsg-replace="true"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                <label for="Smtp_Host">
+                    Custom aaaa
+                </label>
+            </th>
+            <td>
+                <input class="medium" id="Smtp_Host" name="Smtp.Host" type="text" value="aaa">
+                <span class="field-validation-valid" data-valmsg-for="Smtp.Host" data-valmsg-replace="true"></span>
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="Smtp_UserName">
+                    Custom bbb
+                </label>
+            </th>
+            <td>
+                <input autocomplete="off" class="medium" id="Smtp_UserName" name="Smtp.UserName" type="text" value="">
+                <span class="field-validation-valid" data-valmsg-for="Smtp.UserName" data-valmsg-replace="true"></span>
+            </td>
+        </tr>       
+        <tr>
+            <th>
+                <label for="Smtp_From">
+                    Custom ccc
+                </label>
+            </th>
+            <td>
+                <input class="medium" id="Smtp_From" name="Smtp.From" type="text" value="cccc">
+                <span class="field-validation-valid" data-valmsg-for="Smtp.From" data-valmsg-replace="true"></span>
+                @*<em class="tip">The FROM email address of emails sent out by the system. For example: user registration confirmation email.</em>*@
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+
+        <tr>
+            <th>
+                <label for="CustomFields">
+                    Custom fields
+                </label>
+            </th>
+            <td>
+                <table class="key-value" id="CustomFields_Editor">
+                    <thead data-bind="visible: data().length > 0">
+                        <tr>
+                            <th>
+                                Key
+                            </th>
+                            <th>
+                                Value
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: data">
+                        <tr>
+                            <td>
+                                <input type="text" title="key" name="CustomFields[0].Key" class="short" data-bind="value: $data.Key, attr: { name: $parent.getPrefixFieldName($index()) + 'Key' }">
+                            </td>
+                            <td>
+                                <textarea name="CustomFields[0].Value" data-bind="value: $data.Value, attr: { name: $parent.getPrefixFieldName($index()) + 'Value' }" style="overflow: hidden; word-wrap: break-word; resize: none; height: 24px;"></textarea>
+                            </td>
+                            <td>
+                                <a class="action" data-bind="click: $parent.removeItem">
+                                    <img class="icon minus" src="/Images/invis.gif">
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <a class="action" data-bind="click: $data.addItem">
+                                    <img class="icon plus" src="/Images/invis.gif">
+                                </a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <em class="tip">Custom field values that can be accessed in front end site via API: @@Site.Current.CustomFields["key"].</em>
+
+                <script type="text/javascript">
+                    $(function () {
+
+                        function AppViewModel() {
+                            var self = this;
+
+                            self.data = ko.observableArray([]);
+                            self.data.subscribe(function (newValue) {
+                                $('textarea').autosize({ className: 'autoresize' });
+                            });
+
+                            self.addItem = function () {
+                                self.data.push({ Key: '', Value: '' });
+                                $('textarea').autosize({ className: 'autoresize' });
+                            };
+
+                            self.removeItem = function () {
+                                self.data.remove(this);
+                            };
+
+                            var namePrfix = 'CustomFields';
+                            self.getPrefixFieldName = function (index) {
+                                return namePrfix + '[' + (index) + '].';
+                            };
+                        }
+                        var $template = $('#CustomFields_Editor');
+                        var model = new AppViewModel()
+                        $template.data("KO_ViewModel", model);
+                        ko.applyBindings(model, $template[0]);
+                        $('textarea').autosize({ className: 'autoresize' });
+                    });
+                </script>
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>

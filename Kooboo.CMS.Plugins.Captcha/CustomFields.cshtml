@@ -1,0 +1,85 @@
+﻿@model Dictionary<string , string>
+
+    <div id="custom-settings-tab">
+
+        <div class="tabs">
+            <ul class="tab-index clearfix">
+                <li class="active"><a href="#google">@("Google".Localize())</a>@Html.IconImage("arrow blue-down")</li>
+                <li><a href="#TrackingCode">@("TrackingCode".Localize())</a>@Html.IconImage("arrow blue-down")</li>
+            </ul>
+            <div class="tab-content active" id="google">
+                <fieldset>
+                    <table>
+                        <tr>
+                            <th><label for="Google_NoIndex" class="inline">No index</label></th>
+                            <td>
+                                <input type="hidden" name="CustomFields.Index" value="Google_NoIndex" />
+                                <input type="hidden" name="CustomFields[Google_NoIndex].Key" value="Google_NoIndex" />
+                                <input id="Google_NoIndex" type="checkbox" name="CustomFields[Google_NoIndex].Value" value="true" @(Model.GetBool("Google_NoIndex") ? "checked=\"checked\"" : "") />
+                                <input type="hidden" name="CustomFields[Google_NoIndex].Value" value="false" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="Google_NoFollow" class="inline">No follow</label></th>
+                            <td>
+                                <input type="hidden" name="CustomFields.Index" value="Google_NoFollow" />
+                                <input type="hidden" name="CustomFields[Google_NoFollow].Key" value="Google_NoFollow" />
+                                <input id="Google_NoFollow" type="checkbox" name="CustomFields[Google_NoFollow].Value" value="true" @(Model.GetBool("Google_NoFollow") ? "checked=\"checked\"" : "") />
+                                <input type="hidden" name="CustomFields[Google_NoFollow].Value" value="false" />
+                            </td>
+                        </tr>
+
+                    </table>
+                </fieldset>
+            </div>
+            <div class="tab-content" id="TrackingCode">
+                <fieldset>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><label class="inline" for="TrackingCode_ExcludeGeneralTrackingCode">Exclude general tracking code</label></th>
+                                <td>
+                                    <input type="hidden" name="CustomFields.Index" value="TrackingCode_ExcludeGeneralTrackingCode" />
+                                    <input type="hidden" name="CustomFields[TrackingCode_ExcludeGeneralTrackingCode].Key" value="TrackingCode_ExcludeGeneralTrackingCode" />
+                                    <input type="checkbox" id="TrackingCode_ExcludeGeneralTrackingCode" name="CustomFields[TrackingCode_ExcludeGeneralTrackingCode].Value" value="true" @(Model.GetBool("TrackingCode_ExcludeGeneralTrackingCode") ? "checked=\"checked\"" : "") />
+                                    <input type="hidden" name="CustomFields[TrackingCode_ExcludeGeneralTrackingCode].Value" value="false" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="TrackingCode_HeaderScript">Header script</label></th>
+                                <td>
+                                    <input type="hidden" name="CustomFields.Index" value="TrackingCode_HeaderScript" />
+                                    <input type="hidden" name="CustomFields[TrackingCode_HeaderScript].Key" value="TrackingCode_HeaderScript" />
+                                    <textarea id="TrackingCode_HeaderScript" name="CustomFields[TrackingCode_HeaderScript].Value" class="extra-large">@Model.GetString("TrackingCode_HeaderScript")</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="TrackingCode_TopBodyScript">Top body script</label></th>
+                                <td>
+                                    <input type="hidden" name="CustomFields.Index" value="TrackingCode_TopBodyScript" />
+                                    <input type="hidden" name="CustomFields[TrackingCode_TopBodyScript].Key" value="TrackingCode_TopBodyScript" />
+                                    <textarea id="TrackingCode_TopBodyScript" name="CustomFields[TrackingCode_TopBodyScript].Value" class="extra-large">@Model.GetString("TrackingCode_TopBodyScript")</textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="TrackingCode_FooterScript">Footer script</label></th>
+                                <td>
+                                    <input type="hidden" name="CustomFields.Index" value="TrackingCode_FooterScript" />
+                                    <input type="hidden" name="CustomFields[TrackingCode_FooterScript].Key" value="TrackingCode_FooterScript" />
+                                    <textarea id="TrackingCode_FooterScript" name="CustomFields[TrackingCode_FooterScript].Value" class="extra-large">@Model.GetString("TrackingCode_FooterScript")</textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.tabs').each(function () {
+                $(this).koobooTab();
+            });
+        });
+    </script>

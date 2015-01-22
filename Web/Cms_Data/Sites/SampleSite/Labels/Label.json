@@ -1,0 +1,119 @@
+﻿[
+  {
+    "UUID": "3B6H6MZX4Q",
+    "Name": "Sample site",
+    "Value": "Sample site",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:46.5391691Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "KD2ARDB27Y",
+    "Name": "Member Login",
+    "Value": "Member Login",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:48.9273017Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "7L8MP468LJ",
+    "Name": "Register",
+    "Value": "Register",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:49.07031Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "B2KZ75UAVH",
+    "Name": "Articles",
+    "Value": "Articles",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:49.0783116Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "VTQSHZ3WLN",
+    "Name": "Copyright &copy; 2009 - 2013 Kooboo team",
+    "Value": "Copyright &copy; 2009 - 2013 Kooboo team",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:52.8355264Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "BG8M3Z43QF",
+    "Name": "Admin Login",
+    "Value": "Admin Login",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:52.8475257Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "PEFTUNHHQ6",
+    "Name": "Login",
+    "Value": "Login",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:53.760584Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "EMEHHYLBFT",
+    "Name": "Username",
+    "Value": "Username",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:53.7685783Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "9XER5KRR2A",
+    "Name": "Required",
+    "Value": "Required",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:53.7845796Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "FLFSNRD7KB",
+    "Name": "Password",
+    "Value": "Password",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:53.7965799Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "SH5EREA2QR",
+    "Name": "Remember me",
+    "Value": "Remember me",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:54:53.8205824Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": ""
+  },
+  {
+    "UUID": "HMLC7EGV56",
+    "Name": "Captcha",
+    "Value": "Captcha",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:56:31.4577187Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": "admin"
+  },
+  {
+    "UUID": "98LSWZPLB5",
+    "Name": "About us",
+    "Value": "About us",
+    "Category": "",
+    "UtcCreationDate": "2014-03-20T08:56:43.9918805Z",
+    "UtcLastestModificationDate": null,
+    "LastestEditor": "admin"
+  }
+]

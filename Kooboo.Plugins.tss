@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>e:\github\kooboo\cms_extensions\kooboo.plugins\kooboo.cms.plugins.captcha\ui\captchatab.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>e:\github\kooboo\cms_extensions\kooboo.plugins\kooboo.cms.plugins.captcha\captchaplugin.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>e:\github\kooboo\cms_extensions\kooboo.plugins\kooboo.cms.plugins.captcha\responsemanager.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>e:\github\kooboo\cms_extensions\kooboo.plugins\kooboo.cms.plugins.captcha\captchaattribute.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>e:\github\kooboo\cms_extensions\kooboo.plugins\kooboo.cms.plugins.captcha\captchaextensions.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\GitHub\Kooboo\CMS_Extensions\Kooboo.Plugins\Web\Cms_Data\Sites\SampleSite\Templates\Views\Captcha\template.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>e:\github\kooboo\cms_extensions\kooboo.plugins\web\cms_data\sites\samplesite\templates\views\article.detail\template.cshtml</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>
