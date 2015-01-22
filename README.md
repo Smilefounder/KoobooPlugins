@@ -1,0 +1,2 @@
+# KoobooPlugins
+Kooboo Plugins
